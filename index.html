@@ -230,8 +230,8 @@ function nextStep(step) {
 
     if (step === 2) {
         const nome = document.getElementById('nome').value.trim();
-        const telefone = document.getElementById('telefone').value.trim();
-        if (!nome || !telefone) {
+        const email = document.getElementById('e-mail').value.trim();
+        if (!nome || !email) {
             alert("Por favor, preencha todos os campos.");
             return;
         }
