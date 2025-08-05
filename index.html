@@ -205,9 +205,9 @@
         <label>Your TikTok:</label>
         <input type="text" placeholder="Ex: michaeljohnsontiktok" id="tiktokid">
     </div>
-       <!-- 🔶 BOTÃO VERDE ADICIONADO AQUI -->
-    🔶 <button class="green" onclick="validateTikTok()">START ACTIVATION</button>
-    <!-- 🔶 FIM DO BOTÃO -->
+       <!-- BOTÃO VERDE ADICIONADO AQUI -->
+    <button class="green" onclick="validateTikTok()">START ACTIVATION</button>
+    <!-- FIM DO BOTÃO -->
     </div>
 
     <!-- STEP 3.0.1 -->
@@ -275,7 +275,7 @@ function nextStep(step) {
     }
     document.getElementById('step' + step).classList.remove('hidden');
 }
-    🔶 function validateTikTok() {
+    function validateTikTok() {
     const tiktok = document.getElementById('tiktokid').value.trim();
     if (!tiktok) {
         alert("Please fill in the fields.");
