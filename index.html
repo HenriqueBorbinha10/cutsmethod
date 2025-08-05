@@ -206,7 +206,7 @@
         <input type="text" placeholder="Ex: michaeljohnsontiktok" id="tiktokid">
     </div>
        <!-- 🔶 BOTÃO VERDE ADICIONADO AQUI -->
-    <button class="green" onclick="nextStep('3.0.1')">START ACTIVATION</button>
+    🔶 <button class="green" onclick="validateTikTok()">START ACTIVATION</button>
     <!-- 🔶 FIM DO BOTÃO -->
     </div>
 
@@ -269,11 +269,19 @@ function nextStep(step) {
         const nome = document.getElementById('nome').value.trim();
         const email = document.getElementById('e-mail').value.trim();
         if (!nome || !email) {
-            alert("Por favor, preencha todos os campos.");
+            alert("Please fill in the fields.");
             return;
         }
     }
     document.getElementById('step' + step).classList.remove('hidden');
+}
+    🔶 function validateTikTok() {
+    const tiktok = document.getElementById('tiktokid').value.trim();
+    if (!tiktok) {
+        alert("Please fill in the fields.");
+        return;
+    }
+    nextStep('3.0.1');
 }
 </script>
 
