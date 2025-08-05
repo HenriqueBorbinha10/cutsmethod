@@ -262,17 +262,21 @@
 
 <script>
 function nextStep(step) {
-    const steps = ['step1', 'step2', 'step3', 'step3.0', 'step3.0.1', 'step3.1', 'step3.2'];
-    steps.forEach(id => document.getElementById(id).classList.add('hidden'));
-
+    // Validação ANTES de esconder as telas
     if (step == 2) {
         const nome = document.getElementById('nome').value.trim();
         const email = document.getElementById('e-mail').value.trim();
         if (!nome || !email) {
             alert("Please fill in the fields.");
-            return;
+            return; // Evita seguir se os campos estiverem vazios
         }
     }
+
+    // Agora sim: oculta todas as etapas
+    const steps = ['step1', 'step2', 'step3', 'step3.0', 'step3.0.1', 'step3.1', 'step3.2'];
+    steps.forEach(id => document.getElementById(id).classList.add('hidden'));
+
+    // Mostra a etapa correta
     document.getElementById('step' + step).classList.remove('hidden');
 }
     function validateTikTok() {
