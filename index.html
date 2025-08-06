@@ -190,26 +190,61 @@
 
 <!-- STEP 3.0 -->
 <div class="container hidden" id="step3.0">
+    <!-- Botão de voltar -->
     <div style="display: flex;">
         <button class="back-btn" onclick="nextStep(3)">
-            <img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" alt="Voltar"> BACK
+            <img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" alt="Voltar" width="16" height="16">
+            BACK
         </button>
     </div>
 
+    <!-- Caixa de instruções -->
     <div class="tutorial-box">
         <h4>ENTER YOUR TIKTOK</h4>
         <p>Now just enter your TikTok username, which you can find in the profile of the official application and click on the green button below to start activation.</p>
     </div>
 
+    <!-- Campo de entrada do TikTok -->
     <div class="input-group">
-        <label>Your TikTok:</label>
-        <input type="text" placeholder="Ex: michaeljohnsontiktok" id="tiktokid">
-    </div>
-       <!-- BOTÃO VERDE ADICIONADO AQUI -->
-    <button class="green" onclick="validateTikTok()">START ACTIVATION</button>
-    <!-- FIM DO BOTÃO -->
+        <label for="tiktokid">Your TikTok:</label>
+        <input type="text" id="tiktokid" placeholder="Ex: michaeljohnsontiktok">
     </div>
 
+    <!-- NOVO INPUT: Seleção do tipo de vídeo -->
+    <div class="input-group">
+        <label for="videoType">Select or type of video:</label>
+        <select id="videoType">
+            <option value="motivacional">Motivacional</option>
+            <option value="comedia">Comédia</option>
+            <option value="curiosidades">Curiosidades</option>
+            <option value="reacoes">Reações</option>
+            <option value="respostas">Respostas aos comentários</option>
+            <option value="avaliacoes">Avaliações</option>
+            <option value="tendencias">Tendências</option>
+        </select>
+    </div>
+
+    <!-- NOVO INPUT: Seleção da quantidade de vídeos por dia -->
+    <div class="input-group">
+        <label for="videoCount">Quantos vídeos post by day:</label>
+        <select id="videoCount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+    </div>
+
+    <!-- Botão de ativação -->
+    <button class="green" onclick="validateTikTok()">START ACTIVATION</button>
+</div>
+    
     <!-- STEP 3.0.1 -->
 <div class="container hidden" id="step3.0.1">
     <div style="display: flex;">
